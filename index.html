@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Rain</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: red;
+            font-size: 24px;
+            font-family: Arial;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const textContainer = document.body;
+        const text = 'Jaline en PW❤️ ';
+        let isRepeating = false;
+
+        function createText() {
+            textContainer.innerHTML += text + '<br>';
+        }
+
+        function startRepeating() {
+            if (!isRepeating) {
+                isRepeating = true;
+                setInterval(createText, 100); // Adjust the interval as needed
+            }
+        }
+
+        // Call startRepeating() when the page loads to start the animation immediately
+        startRepeating();
+    </script>
+</body>
+</html>
